@@ -1,0 +1,10 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: go_app
+    environment:
+      DATABASE_URL: postgres://postgres:%21%40%23123qwe@host.docker.internal:5432/black_friday_db?sslmode=disable
+    ports:
+      - "8080:8080"
